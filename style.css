@@ -5,17 +5,22 @@
 }
 
 body {
-  background: #555;
-  width: 100%;
-  height: 100vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-body::before {
+.app {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.app::before {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(/images/background.jpg) no-repeat center center/cover;
+  background: url(/images/sunset.jpg) no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -34,40 +39,36 @@ h2 {
 }
 
 .container {
-  margin: 70px auto;
-  padding: 2rem;
-  color: #fff;
-  height: 800px;
-  text-align: center;
-  display: flex;
-  position: relative;
-  top: 10%;
-  border-radius: 20px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
+  max-width: 470px;
+  height: 80%;
+  margin: auto;
+  padding: 1rem;
+
+  display: none;
 }
 
-.container input {
-  padding: 1rem;
-  width: 50%;
-  height: 55px;
+.app input {
+  margin: 30px;
+  width: 300px;
+  padding: 10px 20px;
   border-radius: 10px;
-  font-size: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
   color: #555;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-size: 1.6rem;
 }
-.container button {
+
+.app button {
   width: 55px;
   height: 55px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
-.container button:hover {
+.app button:hover {
   background-color: rgb(47, 204, 99);
 }
-.container button img {
+.app button img {
   width: 16px;
 }
 
@@ -76,7 +77,6 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  transform: translateY(-300px);
 }
 
 .condition {
@@ -95,6 +95,7 @@ h2 {
   border-radius: 10px;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(380px);
 }
 ::placeholder {
   color: #555;
@@ -105,11 +106,7 @@ h2 {
 .wind {
   margin-bottom: 5px;
 }
-.weather {
-  display: none;
-}
 .error {
-  transform: translateY(-620px);
   text-align: left;
   display: none;
 }
